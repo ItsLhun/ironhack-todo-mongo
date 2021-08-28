@@ -18,6 +18,11 @@ h1 {
   font-size: 3rem;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 h2 {
   margin-bottom: 1em;
 }
@@ -40,6 +45,43 @@ button {
   background-color: #549989;
   color: #353535;
   text-align: center;
+}
+
+.empty-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 6em;
+}
+
+.empty-list-container p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 1em;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.btn-create-edit:hover {
+  background-color: #3ee6bf;
 }
 
 .btn-update:hover {
@@ -132,8 +174,10 @@ form input {
 
 form label,
 form input {
+  display: inline-block;
   color: inherit;
   font-size: 1.1rem;
+  margin-bottom: 1em;
 }
 
 form label {
@@ -143,4 +187,33 @@ form label {
 form .title-input,
 form .due-input {
   max-width: 20em;
+}
+
+form textarea {
+  margin-bottom: 1em;
+}
+
+.add-task-form button {
+  margin-top: 1em;
+}
+
+.title-due-wrap {
+  justify-content: space-between;
+}
+
+.input-label-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 25em;
+}
+
+.input-label-wrap * {
+  width: 100%;
+}
+
+.upper-form-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-between;
 }

@@ -1,15 +1,37 @@
 <h2>Edit your task</h2>
-<form class='add-task-form' action='/{{this._id}}/edit'' method='POST'>
-  <label for='title-input'>Title</label>
-  <input id='title-input' type='text' value={{this.title}} name='title' />
+<form
+  class='add-task-form d-flex flex-col'
+  action='/{{this._id}}/edit'
+  method='POST'
+>
+  <div class='upper-form-wrap'>
+    <div class='input-label-wrap'>
+      <label class='w-100' for='title-input'>Title</label>
+      <input
+        class='w-100'
+        id='title-input'
+        type='text'
+        value='{{this.title}}'
+        name='title'
+        minlength='2'
+        maxlength='30'
+      />
+    </div>
+    <div class='input-label-wrap'>
+      <label for='due-input'>Due date</label>
+      <input id='due-input' type='Date' name='due' />
+    </div>
+  </div>
   <label for='desc-input'>Description</label>
-  <input
+  <textarea
     id='desc-input'
     type='text'
-    value={{this.description}}
+    value='{{this.description}}'
     name='description'
-  />
-  <label for='due-input'>Due date</label>
-  <input id='due-input' type='Date' name='due' />
-  <button>Update Task</button>
+    rows='5'
+    minlength='2'
+    maxlength='140'
+  >{{this.description}}</textarea>
+
+  <button class='btn-create-edit'>Update Task</button>
 </form>

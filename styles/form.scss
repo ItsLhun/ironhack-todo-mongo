@@ -6,8 +6,10 @@ form {
   }
   label,
   input {
+    display: inline-block;
     color: inherit;
     font-size: 1.1rem;
+    margin-bottom: 1em;
   }
   label {
     font-size: 1.15rem;
@@ -16,4 +18,29 @@ form {
   .due-input {
     max-width: 20em;
   }
+  textarea {
+    margin-bottom: 1em;
+  }
+}
+.add-task-form {
+  button {
+    margin-top: 1em;
+  }
+}
+.title-due-wrap {
+  justify-content: space-between;
+}
+.input-label-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 25em;
+  * {
+    width: 100%;
+  }
+}
+.upper-form-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-between;
 }

@@ -2,23 +2,35 @@
 
     <h2>Here are your tasks:</h2>
     <div class="task-holder">
-
+    {{#if taskList}}
     {{#each taskList}}
         {{> task this}}
-    {{/each}}    
+    {{/each}}
+    {{else}}
+    <div class="empty-list-container">
+        <p>Looks like the list is empty!</p>    
+    </div>
+    {{/if}}
     </div>
 
     <h2>Add a new Task</h2>
 
     <form class="add-task-form" action="/create-to-do-list-item" method="POST">
-          <label for='title-input'>Title</label>
-        <input id="title-input" type="text" placeholder="Title..." name="title">
-          <label for='due-input'>Due date</label>
-        <input id="due-input" type="Date" placeholder="Due date..." name="due">
-
+    <div class="upper-form-wrap">
+        <div class='input-label-wrap'>
+            <label for='title-input'>Title</label>
+            <input id="title-input" type="text" placeholder="Title..." name="title"     minlength='2'
+    maxlength='30'>
+        </div>
+        <div class='input-label-wrap'>
+            <label for='due-input'>Due date</label>
+            <input id="due-input" type="Date" placeholder="Due date..." name="due">
+        </div>
+        </div>
           <label for='desc-input'>Description</label>
-        <textarea id="desc-input" placeholder="Description..." name="description"></textarea>
+        <textarea id="desc-input" rows=5 placeholder="Description..." name="description"     minlength='2'
+    maxlength='140'></textarea>
        
 
-        <button>Create Task</button>
+        <button class="btn-create-edit">Create Task</button>
     </form>

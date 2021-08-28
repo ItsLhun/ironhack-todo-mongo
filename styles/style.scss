@@ -29,6 +29,10 @@ h1 {
   padding: 1em;
   font-size: 3rem;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 h2 {
   margin-bottom: 1em;
 }
@@ -48,6 +52,38 @@ button {
   background-color: $general-button;
   color: $main-text;
   text-align: center;
+}
+.empty-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 6em;
+  p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+h2 {
+  margin-top: 1em;
+}
+.d-flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.w-100 {
+  width: 100%;
+}
+.btn-create-edit {
+  &:hover {
+    background-color: $mint-green;
+  }
 }
 
 @import 'task';
