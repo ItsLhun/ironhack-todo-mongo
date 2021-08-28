@@ -1,0 +1,15 @@
+<h2>Edit your task</h2>
+<form class='add-task-form' action='/{{this._id}}/edit'' method='POST'>
+  <label for='title-input'>Title</label>
+  <input id='title-input' type='text' value={{this.title}} name='title' />
+  <label for='desc-input'>Description</label>
+  <input
+    id='desc-input'
+    type='text'
+    value={{this.description}}
+    name='description'
+  />
+  <label for='due-input'>Due date</label>
+  <input id='due-input' type='Date' name='due' />
+  <button>Update Task</button>
+</form>

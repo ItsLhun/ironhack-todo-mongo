@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #dadada;
+}
+
+body {
+  color: #353535;
+  font-family: sans-serif;
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 1em;
+  font-size: 3rem;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+.task-wrapper,
+.add-task-form {
+  margin-top: 1em;
+}
+
+.btn {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.btn,
+button {
+  font-size: 1em;
+  border: none;
+  padding: 1em;
+  background-color: #549989;
+  color: #353535;
+  text-align: center;
+}
+
+.btn-update:hover {
+  background-color: #3ee6bf;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #dd3434;
+  cursor: pointer;
+}
+
+.task-wrapper {
+  width: 25em;
+  padding: 1em;
+  background-color: #555555;
+  color: #dddcdc;
+}
+
+.task-wrapper > * {
+  background-color: #555555;
+  margin-top: 0.5em;
+}
+
+.task-wrapper h4 {
+  font-size: 1.4rem;
+}
+
+.task-wrapper p {
+  font-size: 1.1rem;
+}
+
+.task-holder {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.update-delete {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+}
+
+.update-delete * {
+  width: 100%;
+  display: block;
+}
+
+.completed-false {
+  background-color: #e66164;
+}
+
+.completed-false:after {
+  content: 'Not Completed';
+}
+
+.completed-false:hover {
+  background-color: #d63437;
+}
+
+.completed-true {
+  background-color: #62a059;
+}
+
+.completed-true:after {
+  content: 'Completed!';
+}
+
+.completed-true:hover {
+  background-color: #409233;
+}
+
+.completed-true,
+.completed-false {
+  color: white;
+  width: fit-content;
+  padding: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  border: 1px solid rgba(56, 56, 56, 0.5);
+}
+
+form label,
+form input {
+  color: inherit;
+  font-size: 1.1rem;
+}
+
+form label {
+  font-size: 1.15rem;
+}
+
+form .title-input,
+form .due-input {
+  max-width: 20em;
+}

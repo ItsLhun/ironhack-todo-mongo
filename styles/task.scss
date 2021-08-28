@@ -1,0 +1,80 @@
+$task-card-text: #dddcdc;
+$light-green: #62a059;
+$intense-light-green: #409233;
+$dark-green: #5a9951;
+$pastel-red: #e66164;
+$intense-pastel-red: #d63437;
+$danger-red: rgb(221, 52, 52);
+$mint-green: #3ee6bf;
+
+$completed-true: $light-green;
+$completed-false: $pastel-red;
+$completed-true-hover: $intense-light-green;
+$completed-false-hover: $intense-pastel-red;
+
+.btn-update:hover {
+  background-color: $mint-green;
+  //color: $task-card-text;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  background-color: $danger-red;
+  cursor: pointer;
+}
+.task-wrapper {
+  width: 25em;
+  padding: 1em;
+  background-color: #555555;
+  color: $task-card-text;
+  > * {
+    background-color: #555555;
+    margin-top: 0.5em;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+}
+.task-holder {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.update-delete {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+}
+.update-delete * {
+  width: 100%;
+  display: block;
+}
+.completed-false {
+  background-color: $completed-false;
+  &:after {
+    content: 'Not Completed';
+  }
+  &:hover {
+    background-color: $completed-false-hover;
+  }
+}
+
+.completed-true {
+  background-color: $completed-true;
+  &:after {
+    content: 'Completed!';
+  }
+  &:hover {
+    background-color: $completed-true-hover;
+  }
+}
+
+.completed-true,
+.completed-false {
+  color: white;
+  width: fit-content;
+  padding: 1em;
+}

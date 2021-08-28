@@ -1,0 +1,24 @@
+
+
+    <h2>Here are your tasks:</h2>
+    <div class="task-holder">
+
+    {{#each taskList}}
+        {{> task this}}
+    {{/each}}    
+    </div>
+
+    <h2>Add a new Task</h2>
+
+    <form class="add-task-form" action="/create-to-do-list-item" method="POST">
+          <label for='title-input'>Title</label>
+        <input id="title-input" type="text" placeholder="Title..." name="title">
+          <label for='due-input'>Due date</label>
+        <input id="due-input" type="Date" placeholder="Due date..." name="due">
+
+          <label for='desc-input'>Description</label>
+        <textarea id="desc-input" placeholder="Description..." name="description"></textarea>
+       
+
+        <button>Create Task</button>
+    </form>

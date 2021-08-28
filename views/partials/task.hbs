@@ -1,0 +1,22 @@
+<div class="task-wrapper">
+    
+  <h4>{{this.title}}</h4>
+  <p>{{this.description}}</p>
+  <p>Due: 
+    {{#if this.due}}
+         {{this.due}}
+    {{else}}
+        Not set
+    {{/if}}
+  </p>
+  <form action='/toggle/{{this._id}}/{{this.completed}}' method=POST>
+    <button class=completed-{{this.completed}}></button>
+  </form>
+  <div class="update-delete">
+  <a class='btn btn-update' href='/{{this._id}}/edit'>Update</a>
+
+    <form action='/{{this._id}}/delete' method='POST'>
+    <button class="btn-delete">Delete Task</button>
+    </form>
+    </div>
+</div>

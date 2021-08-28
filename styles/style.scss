@@ -1,0 +1,54 @@
+//Palette
+$light-gray: #dddcdc;
+$dark-green: #5a9951;
+$light-green: #7ce66c;
+$pastel-red: #e66164;
+$pastel-dark-green: #549989;
+$mint-green: #3ee6bf;
+
+$main-background: rgb(218, 218, 218);
+$main-text: #353535;
+
+$general-button: $pastel-dark-green;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $main-background;
+}
+body {
+  color: $main-text;
+  font-family: sans-serif;
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 1em;
+  font-size: 3rem;
+}
+h2 {
+  margin-bottom: 1em;
+}
+.task-wrapper,
+.add-task-form {
+  margin-top: 1em;
+}
+.btn {
+  color: inherit;
+  text-decoration: inherit;
+}
+.btn,
+button {
+  font-size: 1em;
+  border: none;
+  padding: 1em;
+  background-color: $general-button;
+  color: $main-text;
+  text-align: center;
+}
+
+@import 'task';
+@import 'form';

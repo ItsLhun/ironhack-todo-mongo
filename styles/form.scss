@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  flex-direction: column;
+  input {
+    border: 1px solid rgba(56, 56, 56, 0.5);
+  }
+  label,
+  input {
+    color: inherit;
+    font-size: 1.1rem;
+  }
+  label {
+    font-size: 1.15rem;
+  }
+  .title-input,
+  .due-input {
+    max-width: 20em;
+  }
+}
