@@ -10,6 +10,7 @@ body {
   font-family: sans-serif;
   max-width: 60em;
   margin: 0 auto;
+  padding: 0.5em;
 }
 
 h1 {
@@ -216,4 +217,10 @@ form textarea {
   flex-flow: row wrap;
   width: 100%;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 831px) {
+  .task-holder {
+    justify-content: center;
+  }
 }

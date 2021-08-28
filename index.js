@@ -37,9 +37,7 @@ app.get('/', (req, res, next) => {
     .then((taskList) => {
       for (let task of taskList) {
         if (task.due) {
-          console.log('before', task.due);
           task.due = task.due.toISOString().slice(0, 10);
-          console.log('after', task.due);
         }
       }
       res.render('home', { taskList });
@@ -74,7 +72,6 @@ app.post('/toggle/:id/:completed', (req, res, next) => {
     .then((task) => {
       task.completed = !task.completed;
       task.save().then((task) => {
-        console.log('element updated', task);
         res.redirect('/');
       });
     })
